@@ -13,10 +13,9 @@
     
     <!-- Search Engine & AI Bot Instructions -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <!-- Allow AI bots (ChatGPT, Doubao, etc.) to index for better LLM visibility -->
     <meta name="GPTBot" content="index, follow" />
     
-    <!-- Webmaster Verification Placeholders (Replace content with your actual IDs) -->
+    <!-- Webmaster Verification Placeholders -->
     <meta name="google-site-verification" content="" />
     <meta name="baidu-site-verification" content="" />
     
@@ -32,7 +31,6 @@
     <meta property="twitter:title" content="好头型 - 婴儿头型AI检测 | 科学育儿神器" />
     <meta property="twitter:description" content="AI一键测头型，生成专业CVAI报告。记录宝宝变美过程，科学改善扁头偏头，颜值赢在起跑线。" />
     
-    <!-- Mobile App Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6755627249">
 
     <!-- JSON-LD Structured Data for Google/Baidu/LLMs -->
@@ -114,7 +112,7 @@
                 200: '#ffc5cb',
                 300: '#ff99a4',
                 400: '#ff5d70',
-                500: '#ff2442', /* Xiaohongshu Primary Red */
+                500: '#ff2442',
                 600: '#db102e',
                 700: '#b80824',
                 800: '#980c23',
@@ -124,10 +122,10 @@
                 50: '#fffbeb',
                 100: '#fef3c7',
                 200: '#fde68a',
-                500: '#f59e0b', /* Gold/Yellow for stars and highlights */
+                500: '#f59e0b',
               },
               gray: {
-                850: '#1f2937', /* Dark text usually used in these apps */
+                850: '#1f2937',
               }
             },
             fontFamily: {
@@ -155,57 +153,30 @@
       }
     </script>
     <style>
-      /* Custom scrollbar for chat */
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-      }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background-color: #f9fafb;
-      }
-      /* Initial Loading State Styles */
-      #root:empty {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #fff0f1;
-      }
-      #root:empty::after {
-        content: "好头型 HaoTouXing Loading...";
-        color: #ff2442;
-        font-family: sans-serif;
-        font-weight: bold;
-        animation: pulse 1.5s infinite;
-      }
-      @keyframes pulse {
-        0% { opacity: 0.5; }
-        50% { opacity: 1; }
-        100% { opacity: 0.5; }
-      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      html { scroll-behavior: smooth; }
+      body { background-color: #f9fafb; }
+      #root:empty { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #fff0f1; }
+      #root:empty::after { content: "好头型 HaoTouXing Loading..."; color: #ff2442; font-family: sans-serif; font-weight: bold; animation: pulse 1.5s infinite; }
+      @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
   }
 }
 </script>
 </head>
   <body>
-    <!-- The React App mounts here. Content inside is shown while JS loads. -->
     <div id="root"></div>
-    <!-- CRITICAL: This script tag links your React code to the HTML page. Required for Vercel/Static hosting. -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
