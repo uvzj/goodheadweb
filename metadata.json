@@ -1,0 +1,8 @@
+{
+  "name": "HaoTouXing - Infant Head Shape Care",
+  "description": "Professional AI-powered infant head shape measurement and tracking application website.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
