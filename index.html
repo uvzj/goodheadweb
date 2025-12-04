@@ -10,7 +10,15 @@
     <meta name="description" content="好头型（HaoTouXing）是一款专业的婴儿头型管理App，利用AI视觉技术3秒测量CVAI指数。提供科学的扁头、偏头（斜头）、舟状头矫正建议及睡姿指导。无需石膏取模，在家即可监测宝宝头型发育，陪伴百万宝妈的育儿神器。" />
     <meta name="keywords" content="好头型, 婴儿头型, CVAI测量, 扁头矫正, 偏头, 斜头, 舟状头, 睡头型, 婴儿头盔, 婴儿枕头, AI育儿, 科学育儿, 小红书育儿" />
     <meta name="author" content="好头型团队" />
-    <meta name="robots" content="index, follow" />
+    
+    <!-- Search Engine & AI Bot Instructions -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <!-- Allow AI bots (ChatGPT, Doubao, etc.) to index for better LLM visibility -->
+    <meta name="GPTBot" content="index, follow" />
+    
+    <!-- Webmaster Verification Placeholders (Replace content with your actual IDs) -->
+    <meta name="google-site-verification" content="" />
+    <meta name="baidu-site-verification" content="" />
     
     <!-- Open Graph / Facebook / WeChat -->
     <meta property="og:type" content="website" />
@@ -24,7 +32,7 @@
     <meta property="twitter:title" content="好头型 - 婴儿头型AI检测 | 科学育儿神器" />
     <meta property="twitter:description" content="AI一键测头型，生成专业CVAI报告。记录宝宝变美过程，科学改善扁头偏头，颜值赢在起跑线。" />
     
-    <!-- Mobile App Smart Banner (Optional but good for SEO) -->
+    <!-- Mobile App Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6755627249">
 
     <!-- JSON-LD Structured Data for Google/Baidu/LLMs -->
@@ -159,7 +167,27 @@
         scroll-behavior: smooth;
       }
       body {
-        background-color: #f9fafb; /* Slightly gray background common in content apps */
+        background-color: #f9fafb;
+      }
+      /* Initial Loading State Styles */
+      #root:empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff0f1;
+      }
+      #root:empty::after {
+        content: "好头型 HaoTouXing Loading...";
+        color: #ff2442;
+        font-family: sans-serif;
+        font-weight: bold;
+        animation: pulse 1.5s infinite;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
       }
     </style>
   <script type="importmap">
@@ -175,6 +203,9 @@
 </script>
 </head>
   <body>
+    <!-- The React App mounts here. Content inside is shown while JS loads. -->
     <div id="root"></div>
+    <!-- CRITICAL: This script tag links your React code to the HTML page. Required for Vercel/Static hosting. -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

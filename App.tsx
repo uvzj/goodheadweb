@@ -44,7 +44,7 @@ const App: React.FC = () => {
   const faqs: FaqItem[] = [
     {
       question: "宝宝头睡扁了还能救吗？",
-      answer: "只要没过18个月都有机会！特别是 0-6 个月是头型矫正的黄金期，宝宝颅骨较软，可塑性强。通过“好头型App”监测 CVAI 数据，配合科学的侧睡和 Tummy Time，圆头逆袭不是梦！💪"
+      answer: "只要没过18个月都有机会！特别是 0-6 个月是婴儿头型矫正的黄金期，宝宝颅骨较软，可塑性强。通过“好头型App”监测 CVAI 数据，配合科学的侧睡和 Tummy Time，圆头逆袭不是梦！💪"
     },
     {
       question: "AI 测量 CVAI 真的准吗？",
@@ -123,6 +123,7 @@ const App: React.FC = () => {
                   🔥 小红书爆款婴儿头型测量神器
                 </div>
                 
+                {/* Semantic H1 for SEO */}
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-[1.15]">
                   养出圆润 <span className="text-brand-500 relative inline-block">
                     好头型
