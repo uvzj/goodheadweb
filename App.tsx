@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Icons } from './components/Icons';
-import { ChatWidget } from './components/ChatWidget';
 import { AppPreview } from './components/AppPreview';
 import { FaqItem, Feature, Testimonial } from './types';
 
@@ -371,9 +370,6 @@ const App: React.FC = () => {
           © 2024 好头型 Technology Co., Ltd. All rights reserved. 
         </div>
       </footer>
-
-      {/* Floating Chat Bot */}
-      <ChatWidget />
     </div>
   );
 };
